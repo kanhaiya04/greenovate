@@ -33,13 +33,13 @@
             <form>
               <h1>Login Form</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input type="text" class="form-control" placeholder="Company's Email" required=""  id="login_email"/>
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input type="password" class="form-control" placeholder="Password" required="" id="login_password"/>
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.html">Log in</a>
+                <a class="btn btn-default submit" id="loginbtn">Log in</a>
                 <a class="reset_pass" href="#">Lost your password?</a>
               </div>
 
@@ -54,8 +54,8 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 4 template. Privacy and Terms</p>
+                  <h1><i class="fa fa-paw"></i> Greenovate</h1>
+                 
                 </div>
               </div>
             </form>
@@ -90,8 +90,8 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 4 template. Privacy and Terms</p>
+                  <h1><i class="fa fa-paw"></i> Greenovate</h1>
+                  
                 </div>
               </div>
             </form>
@@ -100,4 +100,50 @@
       </div>
     </div>
   </body>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyClRPfLjH3PKK_ERTs487fuKhIyBbo5QTg",
+      authDomain: "greenovate-46b61.firebaseapp.com",
+      projectId: "greenovate-46b61",
+      storageBucket: "greenovate-46b61.appspot.com",
+      messagingSenderId: "12037851299",
+      appId: "1:12037851299:web:bcc182d8d1e5dfc32b9716",
+      measurementId: "G-4RPYDBXSVF"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    document.getElementById("loginbtn").addEventListener("click", function() {
+        var email =  document.getElementById("login_email").value;
+        var password = document.getElementById("login_password").value;
+
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          console.log(user);
+          alert(user.email+" Login successfully!!!");
+          document.getElementById('logout').style.display = 'block';
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorMessage);
+          alert(errorMessage);
+        });		  		  
+    });
+
+
+  </script>
 </html>
