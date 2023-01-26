@@ -24,6 +24,18 @@
             }
         });
     </script>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="../vendors/animate.css/animate.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
     <script type="text/javascript">
         ! function(o, c) {
@@ -176,32 +188,26 @@
                     <div class="html-embed-6 w-embed w-script">
                         <!--[if lte IE 8]>
 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-<![endif]-->
-                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-                        <script>
-                            hbspt.forms.create({
-                                region: "na1",
-                                portalId: "9205592",
-                                formId: "ca531b4a-6d00-4c49-bead-819ecc958e79"
-                            });
-                        </script>
-                        <script src="https://js.chilipiper.com/marketing.js" type="text/javascript"></script>
-                        <script>
-                            var cpTenantDomain = "www-sustain"; // replace with your subdomain
-                            var cpRouterName = "inbound-router"; // replace with the router's name
-                            window.addEventListener("message", function(event) {
-                                if (event.data.type === "hsFormCallback" && event.data.eventName === "onFormSubmit") {
-                                    var lead = {};
-                                    for (key in event.data.data) {
-                                        lead[event.data.data[key].name] = event.data.data[key].value;
-                                    }
-                                    ChiliPiper.submit(cpTenantDomain, cpRouterName, {
-                                        map: true,
-                                        lead: lead
-                                    });
-                                }
-                            });
-                        </script>
+<![endif]-->    
+<form name="registration_form" id="registration_form" method="post" action="#" enctype="multipart/form-data" >
+    <div class="row">
+  
+      <div class="col-sm-4">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" class="form-control" placeholder="Company's official email id" style="width:20rem;">
+          </div>
+          
+          <div class="form-group">
+            <label for="password" >Password</label>
+            <input type="password" name="password" id="password" class="form-control"  placeholder="password" style="color:green;">
+           
+          </div>
+          <button type="button" id="register" name="register"  style="color:black; background-color:grey; margin-top:10px;">Confirm email and register</button>
+      </div><!-- end col -->
+      </form>
+                       
+                        
                     </div>
                 </div>
             </div>
@@ -359,4 +365,57 @@
     <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
 </body>
 
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyClRPfLjH3PKK_ERTs487fuKhIyBbo5QTg",
+        authDomain: "greenovate-46b61.firebaseapp.com",
+        projectId: "greenovate-46b61",
+        storageBucket: "greenovate-46b61.appspot.com",
+        messagingSenderId: "12037851299",
+        appId: "1:12037851299:web:bcc182d8d1e5dfc32b9716",
+        measurementId: "G-4RPYDBXSVF"
+      };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth();
+    console.log(app);
+
+    
+
+    //----- New Registration code start	  
+    document.getElementById("register").addEventListener("click", function() {
+        var email =  document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        //For new registration
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          console.log(user);
+          alert("Registration successfully!!");
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // ..
+          console.log(errorMessage);
+          alert(error);
+        });		  		  
+    });
+  
+
+  </script>
 </html>
