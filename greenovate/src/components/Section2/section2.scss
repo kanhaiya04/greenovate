@@ -1,0 +1,132 @@
+.section2 {
+  padding: 2rem 28rem;
+
+  background-color: #c7dddf;
+}
+#no:hover{
+  #im{
+  filter: blur(0px);
+  -webkit-filter: blur(0px); 
+}
+}
+
+.heading {
+  font-size: 0.707rem;
+  font-family: Ppneuemontreal, sans-serif;
+  color: #171f20;
+}
+
+.headingContent {
+  padding: 2rem 0;
+  overflow: visible;
+  margin-top: 0;
+  margin-bottom: 32px;
+  margin-left: -6px;
+  color: #171f20;
+  font-size: 90.4px;
+  line-height: 96px;
+  font-weight: 500;
+  font-family: Ppneuemontreal, sans-serif;
+}
+
+.valueprop-card .measure {
+  will-change: transform;
+  transform: translate3d(-1.91475px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+
+.valueprop-card .manage {
+  will-change: transform;
+  transform: translate3d(-185px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+
+.valueprop-card .report {
+  will-change: transform;
+  transform: translate3d(-185px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+
+.home-product .manage {
+  will-change: opacity;
+  opacity: 1;
+}
+.home-product .measure {
+  will-change: opacity;
+  opacity: 1;
+}
+
+.Content-heading {
+  padding: 7rem 0 2rem 0;
+  font-size: 22.6px;
+  font-weight: 600;
+  color: #00181c;
+  max-width: 416px;
+  font-size: 22.6px;
+  line-height: 32px;
+  font-family: Ppneuemontreal, sans-serif;
+}
+
+.content {
+  padding: 0 0 7rem 0;
+  max-width: 416px;
+  font-size: 22.6px;
+  line-height: 32px;
+  font-family: Ppneuemontreal, sans-serif;
+  font-weight: 400;
+}
+
+.number {
+  padding: 9.5rem 0 8rem ;
+  font-size: 129.8px;
+  color: #00181c;
+  line-height: 128px;
+  font-family: Ppneuemontreal, sans-serif;
+  
+}
+
+.img {
+  height: 600px;
+  padding-bottom: 2px;
+  position: relative;
+  left:5rem;
+}
+.image1 {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.image3 {
+  position: absolute;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  top: 2200px;
+  left: 1007px;
+}
+.image2 {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  bottom: 260px;
+  left: 150px;
+}
+
+.image1:hover {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  z-index: 1;
+}
+
+.image2:hover {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  z-index: 1;
+}
+.image3:hover {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
+
+

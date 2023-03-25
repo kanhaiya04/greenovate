@@ -1,0 +1,45 @@
+.section3{
+        padding: 2rem 28rem;
+        background-color: #003138;
+        padding-bottom: 10rem;
+}
+
+.section3 .heading{
+        color: #f3f8f6;
+}
+
+
+.img-down{
+        top:2900px;
+        width: 500px;
+        position: absolute;
+        right: 330px;
+}
+.section3 .headingContent{
+        position: relative;
+        color: #f3f8f6;
+        z-index: 1;
+}
+
+.data{
+        color: #f3f8f6;
+        line-height: 5px;
+        font-family: Ppneuemontreal, sans-serif;
+}
+
+.data1{
+        color: #f3f8f6;
+        font-size: 16px;
+        font-family: Ppneuemontreal,sans-serif;
+        font-weight: 600;
+        padding: 9px 0;
+}
+
+
+.broker{
+
+}
+
+.data1{
+        padding-top: 5rem;
+}

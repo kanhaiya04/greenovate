@@ -1,0 +1,50 @@
+.section1 {
+  padding: 2rem 28rem;
+  background-color: #171f20;
+}
+.section1 h1 {
+  overflow: visible;
+  margin-top: 0;
+  margin-bottom: 32px;
+  margin-left: -6px;
+  color: #fff;
+  font-size: 90.4px;
+  line-height: 96px;
+  font-weight: 500;
+  font-family: Ppneuemontreal, sans-serif;
+}
+
+.section1 p {
+  font-size: 1.2rem;
+  font-family: Ppneuemontreal, sans-serif;
+  color: #fff;
+  margin-bottom: 0;
+  line-height: 0.5rem;
+}
+
+.category-card {
+  will-change: transform;
+  transform: translate3d(0px, 130.188px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+
+.impact-chart {
+  will-change: transform;
+  transform: translate3d(0px, 141.815px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+
+
+.emissions-card{
+        will-change: transform; 
+        transform: translate3d(0px, 114.54px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); 
+        transform-style: preserve-3d;
+}
+
+.lifestyle-image{
+        will-change: transform; 
+        transform: translate3d(0px, 10.6682px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); 
+        transform-style: preserve-3d;
+}

@@ -1,0 +1,15 @@
+.section4 {
+  padding: 2rem 28rem;
+
+  background-color: #f5e90a;
+}
+
+.section4 .img{
+        width: 400px;
+        height: 500px;
+}
+
+.section4 .headingContent{
+        padding-top: 5rem;
+        font-weight: 500;
+}
