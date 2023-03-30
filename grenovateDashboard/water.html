@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--Top menu -->
+      <div class="sidebar">
+        <!--profile image & text-->
+        <!--menu item-->
+        <div class="profile">
+          <a href="./index.html" style="color: #666;">
+
+            <img
+            src="./logo.png"
+            alt="profile_picture"
+            />
+            <h2>GreenoVate</h2>
+          </a>
+          <ul>
+                <li style="padding-top: 12rem;">
+              <a href="./buiding.html" >
+                <span class="icon"><i class="fas fa-building"></i></span>
+                <span class="item">Building</span>
+              </a>
+            </li>
+            <li>
+              <a href="./water.html" class="active">
+                <span class="icon"><i class="fas fa-water"></i></span>
+                <span class="item">Water</span>
+              </a>
+            </li>
+            <li>
+              <a href="./waste.html">
+                <span class="icon"><i class="fas fa-dumpster"></i></span>
+                <span class="item">Waste</span>
+              </a>
+            </li>
+            <li>
+              <a href="./equipment.html">
+                <span class="icon"><i class="fas fa-screwdriver"></i></span>
+                <span class="item">Equipment</span>
+              </a>
+            </li>
+            <li>
+              <a href="./product.html">
+                <span class="icon"><i class="fas fa-box"></i></span>
+                <span class="item">Product</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="top_navbar">
+          <div class="hamburger">
+            <a href="#">
+              <i class="fas fa-bars"></i>
+            </a>
+          </div>
+        </div>
+        <div class="testbox">
+                <form>
+                  <div class="banner water">
+                    <h1>Water</h1>
+                  </div>
+                  <br/>
+                  <fieldset>
+                    <legend>Data</legend>
+                    <div class="colums">
+                      <div class="item data">
+                        <label for="fname">Water Supply</label>
+                        <input id="fname" type="number" step="0.01" name="fname" required />
+                      </div>
+                      <div class="item data">
+                        <label for="lname">Water Treatment</label>
+                        <input id="lname" type="number" step="0.01" name="lname" required/>
+                      </div>
+                      <div class="item data">
+                        <label for="address">Collected and purified water/distribution of water (services)</label>
+                        <input id="address" type="number" step="0.01"   name="address" required/>
+                      </div>
+                  </fieldset>
+                  <br/>
+                  <div class="btn-block">
+                  <button type="order" href="/">Submit</button>
+                  </div>
+                </form>
+                </div>
+            
+
+</div>
+    </div>
+    <script>
+      var hamburger = document.querySelector(".hamburger");
+      hamburger.addEventListener("click", function () {
+        document.querySelector("body").classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
